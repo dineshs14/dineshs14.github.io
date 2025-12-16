@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initChristmasModal() {
     const modal = document.getElementById('christmas-modal');
     const closeBtn = document.getElementById('christmas-close');
+    const thanksBtn = document.getElementById('christmas-btn');
     
     if (!modal || !closeBtn) return;
 
@@ -52,8 +53,13 @@ function initChristmasModal() {
         sessionStorage.setItem('christmasModalSeen', 'true');
     }
 
-    // Close on button click
+    // Close on close button click
     closeBtn.addEventListener('click', closeModal);
+
+    // Close on Thank You button click
+    if (thanksBtn) {
+        thanksBtn.addEventListener('click', closeModal);
+    }
 
     // Close on backdrop click
     modal.addEventListener('click', (e) => {
