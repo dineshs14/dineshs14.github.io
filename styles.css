@@ -70,6 +70,14 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: var(--font-primary);
     background: var(--bg-primary);
@@ -113,12 +121,16 @@ body {
     inset: 0;
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(15px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 100000;
     animation: fadeIn 0.6s ease;
     padding: 20px;
+}
+
+.christmas-modal.show {
+    display: flex;
 }
 
 .christmas-modal.hidden {
@@ -690,6 +702,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .nav-logo {
@@ -3386,20 +3404,23 @@ body {
         cursor: auto !important;
     }
 
-    /* Adjust floating theme toggle */
+    /* Adjust floating theme toggle - right side */
     .theme-toggle-floating {
         width: 45px;
         height: 45px;
         top: 12px;
         right: 12px;
+        left: auto;
         font-size: 1rem;
         z-index: 9999;
     }
 
-    /* Hamburger positioning */
+    /* Hamburger positioning - left side */
     .hamburger {
         z-index: 10002;
         position: relative;
+        display: flex !important;
+        margin-right: 5px;
     }
 
     /* Fix timeline spacing */

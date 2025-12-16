@@ -3,7 +3,26 @@
    Trending Animations & Interactivity
    ===================================================== */
 
+// Ensure page starts at top on load
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }, 0);
+});
+
+// Reset scroll position on page show (back/forward navigation)
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        window.scrollTo(0, 0);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Immediately scroll to top
+    window.scrollTo(0, 0);
+    
     initChristmasModal();
     initParticles();
     initCursorEffects();
@@ -28,26 +47,29 @@ function initChristmasModal() {
     const closeBtn = document.getElementById('christmas-close');
     const thanksBtn = document.getElementById('christmas-btn');
     
-    if (!modal || !closeBtn) return;
+    if (!modal || !closeBtn) {
+        console.log('Christmas modal elements not found');
+        return;
+    }
 
-    // Check if modal was already shown in this session
+    // Check if modal was already shown (you can clear browser storage to see it again)
     const hasSeenModal = sessionStorage.getItem('christmasModalSeen');
     
     if (!hasSeenModal) {
-        // Show modal
-        modal.style.display = 'flex';
-        
-        // Prevent body scroll when modal is open
-        document.body.style.overflow = 'hidden';
-    } else {
-        modal.style.display = 'none';
+        // Show modal after a short delay
+        setTimeout(() => {
+            modal.classList.add('show');
+            modal.classList.remove('hidden');
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }, 800);
     }
 
     // Close modal function
     function closeModal() {
+        modal.classList.remove('show');
         modal.classList.add('hidden');
         setTimeout(() => {
-            modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }, 500);
         sessionStorage.setItem('christmasModalSeen', 'true');
@@ -70,7 +92,7 @@ function initChristmasModal() {
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
             closeModal();
         }
     });
