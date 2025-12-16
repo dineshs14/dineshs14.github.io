@@ -810,6 +810,8 @@ body {
     cursor: pointer;
     gap: 6px;
     padding: 10px;
+    z-index: 10002;
+    position: relative;
 }
 
 .hamburger .bar {
@@ -3187,6 +3189,22 @@ body {
 
     .hamburger {
         display: flex;
+        z-index: 10002;
+    }
+
+    /* Fix theme toggle positioning on mobile */
+    .theme-toggle-floating {
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        z-index: 9999;
+    }
+
+    /* Ensure navbar doesn't conflict */
+    .navbar {
+        z-index: 10000;
     }
 
     .timeline-line {
@@ -3283,6 +3301,16 @@ body {
     .logo-text-shiny {
         font-size: 1.5rem;
     }
+
+    /* Christmas Modal Tablet */
+    .christmas-content {
+        padding: 50px 30px 40px;
+        max-width: 450px;
+    }
+
+    .christmas-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3360,11 +3388,18 @@ body {
 
     /* Adjust floating theme toggle */
     .theme-toggle-floating {
-        width: 50px;
-        height: 50px;
-        top: 20px;
-        right: 20px;
-        font-size: 1.2rem;
+        width: 45px;
+        height: 45px;
+        top: 12px;
+        right: 12px;
+        font-size: 1rem;
+        z-index: 9999;
+    }
+
+    /* Hamburger positioning */
+    .hamburger {
+        z-index: 10002;
+        position: relative;
     }
 
     /* Fix timeline spacing */
@@ -3423,6 +3458,61 @@ body {
     .hero-description {
         font-size: 0.95rem;
         line-height: 1.7;
+    }
+
+    /* Christmas Modal Mobile */
+    .christmas-content {
+        padding: 45px 20px 35px;
+        margin: 0 10px;
+        max-width: calc(100vw - 20px);
+    }
+
+    .christmas-title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+
+    .christmas-message {
+        font-size: 0.9rem;
+    }
+
+    .christmas-tree {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .santa {
+        font-size: 2rem;
+    }
+
+    .reindeer {
+        font-size: 1.8rem;
+    }
+
+    .christmas-btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+
+    .lights {
+        padding: 6px 8px;
+    }
+
+    .light {
+        width: 8px;
+        height: 8px;
+    }
+
+    .christmas-close {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+        font-size: 1.1rem;
+    }
+
+    .christmas-tagline {
+        font-size: 0.85rem;
     }
 }
 
@@ -3485,44 +3575,43 @@ body {
         font-size: 1rem;
     }
 
-    /* Christmas Modal Mobile */
+    /* Christmas Modal Extra Small */
     .christmas-content {
-        padding: 50px 25px 40px;
-        margin: 0 15px;
+        padding: 40px 18px 32px;
+        margin: 0 8px;
     }
 
     .christmas-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .christmas-message {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .christmas-tree {
-        font-size: 3.5rem;
-    }
-
-    .santa {
         font-size: 2.5rem;
     }
 
+    .santa {
+        font-size: 1.8rem;
+    }
+
     .reindeer {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .christmas-btn {
-        padding: 14px 30px;
-        font-size: 1rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
-    .lights {
-        padding: 8px 10px;
+    .christmas-letter {
+        font-size: inherit;
     }
 
-    .light {
-        width: 10px;
-        height: 10px;
+    .christmas-emoji {
+        font-size: 2rem;
     }
 }
 
