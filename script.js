@@ -4,6 +4,7 @@
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initChristmasModal();
     initParticles();
     initCursorEffects();
     initNavigation();
@@ -18,6 +19,56 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormHandler();
     initLetterHover();
 });
+
+/* =====================================================
+   CHRISTMAS MODAL
+   ===================================================== */
+function initChristmasModal() {
+    const modal = document.getElementById('christmas-modal');
+    const closeBtn = document.getElementById('christmas-close');
+    
+    if (!modal || !closeBtn) return;
+
+    // Check if modal was already shown in this session
+    const hasSeenModal = sessionStorage.getItem('christmasModalSeen');
+    
+    if (!hasSeenModal) {
+        // Show modal
+        modal.style.display = 'flex';
+        
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+    } else {
+        modal.style.display = 'none';
+    }
+
+    // Close modal function
+    function closeModal() {
+        modal.classList.add('hidden');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 500);
+        sessionStorage.setItem('christmasModalSeen', 'true');
+    }
+
+    // Close on button click
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+}
 
 /* =====================================================
    PARTICLE BACKGROUND
