@@ -164,18 +164,28 @@ body {
     border-radius: 50%;
     color: white;
     font-size: 1.3rem;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .christmas-close:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: rotate(90deg) scale(1.1);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    cursor: pointer !important;
+}
+
+.christmas-close:active {
+    transform: rotate(90deg) scale(0.95);
+    cursor: pointer !important;
 }
 
 .santa-wrapper {
@@ -283,21 +293,27 @@ body {
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer !important;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
     z-index: 10;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .christmas-btn:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+    cursor: pointer !important;
 }
 
 .christmas-btn:active {
     transform: translateY(-1px) scale(1.02);
+    cursor: pointer !important;
 }
 
 .christmas-btn span {
@@ -4271,6 +4287,14 @@ a,
 button,
 input {
     cursor: none !important;
+}
+
+/* Exception: Show cursor on Christmas modal and buttons */
+.christmas-modal,
+.christmas-modal *,
+.christmas-close,
+.christmas-btn {
+    cursor: pointer !important;
 }
 
 /* Re-assert Lamp Visibility */

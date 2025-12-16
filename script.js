@@ -76,11 +76,19 @@ function initChristmasModal() {
     }
 
     // Close on close button click
-    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+    });
 
     // Close on Thank You button click
     if (thanksBtn) {
-        thanksBtn.addEventListener('click', closeModal);
+        thanksBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeModal();
+        });
     }
 
     // Close on backdrop click
@@ -90,9 +98,16 @@ function initChristmasModal() {
         }
     });
 
-    // Close on Escape key
+    // Close on ANY key press when modal is visible
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
+        if (modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    // Close on touch outside (for mobile)
+    modal.addEventListener('touchend', (e) => {
+        if (e.target === modal) {
             closeModal();
         }
     });
