@@ -36,7 +36,10 @@
         <div class="nav-inner">
             <a href="#hero" class="nav-brand">
                 <span class="brand-icon">DS</span>
-                <span class="brand-name">Dinesh<span class="brand-accent">S</span></span>
+                <span class="brand-name">
+                    <span class="brand-first">Dinesh</span>
+                    <span class="brand-accent">S</span>
+                </span>
             </a>
             <div class="nav-links" id="nav-links">
                 <a href="#hero" class="nav-link active">Home</a>
@@ -60,27 +63,47 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="hero-spotlight" id="hero-spotlight" aria-hidden="true"></div>
+        <!-- Floating geometric shapes -->
+        <div class="hero-geo-shapes" aria-hidden="true">
+            <div class="geo-shape geo-hex" style="--geo-x:8%;--geo-y:15%;--geo-size:60px;--geo-delay:0s;--geo-dur:18s;"></div>
+            <div class="geo-shape geo-ring" style="--geo-x:85%;--geo-y:20%;--geo-size:44px;--geo-delay:2s;--geo-dur:22s;"></div>
+            <div class="geo-shape geo-tri" style="--geo-x:12%;--geo-y:72%;--geo-size:36px;--geo-delay:4s;--geo-dur:20s;"></div>
+            <div class="geo-shape geo-cross" style="--geo-x:78%;--geo-y:75%;--geo-size:32px;--geo-delay:1s;--geo-dur:16s;"></div>
+            <div class="geo-shape geo-dot" style="--geo-x:50%;--geo-y:10%;--geo-size:12px;--geo-delay:3s;--geo-dur:14s;"></div>
+            <div class="geo-shape geo-ring" style="--geo-x:30%;--geo-y:85%;--geo-size:28px;--geo-delay:5s;--geo-dur:24s;"></div>
+            <div class="geo-shape geo-dot" style="--geo-x:92%;--geo-y:50%;--geo-size:10px;--geo-delay:2.5s;--geo-dur:12s;"></div>
+            <div class="geo-shape geo-hex" style="--geo-x:65%;--geo-y:88%;--geo-size:40px;--geo-delay:6s;--geo-dur:19s;"></div>
+        </div>
+        <!-- Aurora layers -->
+        <div class="hero-aurora" id="hero-aurora" aria-hidden="true">
+            <div class="aurora-layer aurora-1"></div>
+            <div class="aurora-layer aurora-2"></div>
+            <div class="aurora-layer aurora-3"></div>
+        </div>
         <div class="hero-grid">
-            <div class="hero-left" data-animate="fade-right">
-                <div class="hero-badge glass-pill">
+            <div class="hero-left">
+                <div class="hero-entrance he-1 hero-badge glass-pill">
                     <span class="pulse-dot"></span>
-                    Available for opportunities
+                    Immediate Joiner
                 </div>
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">
-                    <span class="name-gradient">Dinesh S</span>
+                <p class="hero-entrance he-2 hero-greeting">Hello, I'm</p>
+                <h1 class="hero-entrance he-3 hero-name">
+                    <span class="name-kinetic" id="name-kinetic">
+                        <span class="kinetic-char" style="--ci:0">D</span><span class="kinetic-char" style="--ci:1">i</span><span class="kinetic-char" style="--ci:2">n</span><span class="kinetic-char" style="--ci:3">e</span><span class="kinetic-char" style="--ci:4">s</span><span class="kinetic-char" style="--ci:5">h</span><span class="kinetic-char kinetic-space" style="--ci:6">&nbsp;</span><span class="kinetic-char" style="--ci:7">S</span>
+                    </span>
+                    <span class="name-glow-bg" aria-hidden="true"></span>
                 </h1>
-                <div class="hero-role">
+                <div class="hero-entrance he-4 hero-role">
                     <span class="role-icon"><i class="fas fa-robot"></i></span>
                     <span class="typing-text" id="typing-text"></span>
                     <span class="type-cursor">|</span>
                 </div>
-                <p class="hero-desc">
+                <p class="hero-entrance he-5 hero-desc">
                     A skilled <strong>Machine Learning Engineer</strong> with expertise in Python,
                     Deep Learning, and AI tools. Focused on problem-solving and innovation with
                     practical experience in AI applications.
                 </p>
-                <div class="hero-stats">
+                <div class="hero-entrance he-6 hero-stats">
                     <a href="#projects" class="stat-box glass-card" data-count="3">
                         <span class="stat-num">0</span>
                         <span class="stat-label">Projects</span>
@@ -94,7 +117,7 @@
                         <span class="stat-label">Publications</span>
                     </a>
                 </div>
-                <div class="hero-actions">
+                <div class="hero-entrance he-7 hero-actions">
                     <a href="#contact" class="btn btn-primary">
                         <span>Get In Touch</span>
                         <i class="fas fa-arrow-right"></i>
@@ -104,34 +127,42 @@
                         <i class="fas fa-code"></i>
                     </a>
                 </div>
-                <div class="hero-socials">
+                <div class="hero-entrance he-8 hero-socials">
                     <a href="https://www.linkedin.com/in/dinesh-s-3978b819a/" target="_blank" aria-label="LinkedIn"
                         class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/dineshs14" target="_blank" aria-label="GitHub" class="social-icon"><i
                             class="fab fa-github"></i></a>
                     <a href="https://orcid.org/0009-0009-1489-7369" target="_blank" aria-label="ORCID"
                         class="social-icon"><i class="fab fa-orcid"></i></a>
-                    <a href="mailto:sdinesh14022001@gmail.com" aria-label="Email" class="social-icon"><i
+                        <a href="mailto:dineshs142@outlook.com" aria-label="Email" class="social-icon"><i
                             class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="hero-right" data-animate="fade-left">
-                <div class="profile-ring">
+            <div class="hero-right">
+                <div class="hero-entrance he-profile profile-ring">
                     <div class="ring-glow"></div>
+                    <div class="ring-energy" aria-hidden="true">
+                        <div class="energy-particle ep-1"></div>
+                        <div class="energy-particle ep-2"></div>
+                        <div class="energy-particle ep-3"></div>
+                        <div class="energy-particle ep-4"></div>
+                        <div class="energy-particle ep-5"></div>
+                        <div class="energy-particle ep-6"></div>
+                    </div>
+                        <div class="profile-orbits" aria-hidden="true">
+                            <span class="orbit-dot od-1"></span>
+                            <span class="orbit-dot od-2"></span>
+                            <span class="orbit-dot od-3"></span>
+                            <span class="orbit-dot od-4"></span>
+                        </div>
                     <img src="profile.jpg" alt="Dinesh S" class="profile-img">
-                    <div class="orbit orbit-1"><i class="fab fa-python"></i></div>
-                    <div class="orbit orbit-2"><i class="fas fa-brain"></i></div>
-                    <div class="orbit orbit-3"><i class="fas fa-database"></i></div>
                 </div>
-                <div class="float-badge badge-1 glass-pill"><i class="fab fa-python"></i> Python</div>
-                <div class="float-badge badge-2 glass-pill"><i class="fas fa-robot"></i> AI / ML</div>
-                <div class="float-badge badge-3 glass-pill"><i class="fas fa-chart-line"></i> Analytics</div>
+                <div class="hero-entrance he-badge1 float-badge badge-1 glass-pill"><i class="fas fa-brain"></i> ML Engineer</div>
+                <div class="hero-entrance he-badge2 float-badge badge-2 glass-pill"><i class="fas fa-eye"></i> Computer Vision</div>
+                <div class="hero-entrance he-badge3 float-badge badge-3 glass-pill"><i class="fab fa-python"></i> Python & NLP</div>
             </div>
         </div>
-        <div class="scroll-cue">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
+        <!-- scroll cue removed as requested -->
     </section>
 
     <!-- ==================== ABOUT ==================== -->
@@ -239,19 +270,17 @@
             </div>
             <div class="exp-card glass-card" data-animate="fade-up">
                 <div class="exp-glow"></div>
-                <div class="exp-status"><span class="pulse-dot"></span> Currently Working</div>
                 <div class="exp-header">
                     <div class="exp-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Rakuten_Global_Brand_Logo.svg/1200px-Rakuten_Global_Brand_Logo.svg.png"
-                            alt="Rakuten"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="logo-fallback" style="display:none;"><i class="fas fa-building"></i></div>
+                        <div class="logo-badge" aria-hidden="true">
+                            <span class="logo-mark">RI</span>
+                        </div>
                     </div>
                     <div class="exp-info">
                         <h3>Rakuten India Enterprise Pvt. Ltd.</h3>
                         <p class="exp-role"><i class="fas fa-laptop-code"></i> Technical Intern</p>
                         <div class="exp-meta">
-                            <span><i class="fas fa-calendar-alt"></i> Sep 2024 – Sep 2025</span>
+                            <span><i class="fas fa-calendar-alt"></i> Sep 2025 – May 2026</span>
                             <span><i class="fas fa-map-marker-alt"></i> India</span>
                         </div>
                     </div>
@@ -377,7 +406,7 @@
                     <h3>M.Tech in AI & Machine Learning</h3>
                     <h4><i class="fas fa-university"></i> Vellore Institute of Technology</h4>
                     <div class="edu-score">
-                        <div class="score-ring" data-score="8.86">
+                        <div class="score-ring" data-score="8.93">
                             <svg viewBox="0 0 120 120">
                                 <circle class="ring-bg" cx="60" cy="60" r="52" />
                                 <circle class="ring-fill" cx="60" cy="60" r="52" stroke-dasharray="0 327" />
@@ -386,7 +415,7 @@
                         </div>
                         <span class="score-label">CGPA</span>
                     </div>
-                    <p>Pursuing advanced studies in Artificial Intelligence and Machine Learning</p>
+                    <p>Completed advanced studies in Artificial Intelligence and Machine Learning.</p>
                 </div>
                 <!-- B.Tech -->
                 <div class="edu-card glass-card" data-animate="fade-up" data-delay="200">
@@ -408,25 +437,108 @@
                     </div>
                     <p>Artificial Intelligence and Data Science specialization</p>
                 </div>
-                <!-- HSC -->
-                <div class="edu-card edu-card-sm glass-card" data-animate="fade-up" data-delay="100">
-                    <div class="edu-icon-wrap">
-                        <div class="edu-icon sm"><i class="fas fa-school"></i></div>
-                        <span class="edu-year">2018</span>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RECOMMENDATIONS ==================== -->
+    <section class="section" id="recommendations">
+        <div class="container">
+            <div class="section-head" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-comment-dots"></i> Testimonials</span>
+                <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+            </div>
+            
+            <div class="recom-marquee-wrapper" data-animate="fade-up">
+                <div class="recom-marquee">
+                    <div class="recom-track">
+                        <!-- Card 1 -->
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I highly recommend Dinesh S for any role in Software Engineering or AI/ML. During his time as an intern with my team, he stood out as a sharp, proactive, and technically capable engineer. What impressed me most was his ability to bridge the gap between traditional software development and AI/ML transformation. He didn't just build features; he understood how to integrate intelligent models to drive actual value. He tackles complex problems with a great attitude and picks up new frameworks incredibly fast. He has a bright career ahead of him and would be a massive asset to any engineering team.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Arunkumar Ghargi</h4>
+                                    <span>Senior Technology & GCC Strategy Leader | <span class="company-badge-inline">Rakuten</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I have been following Dinesh's work for a while and collaborated with him on a machine learning project—I can confidently vouch for his exceptional skills and dedication. Dinesh's diverse skill set, spanning Python, Java, SQL, C/C++, HTML/CSS, and R, is truly impressive. His proactive problem-solving approach and innovative contributions reflect his technical prowess. What stands out is his eagerness to explore possibilities and apply ML to real problems. I wholeheartedly recommend Dinesh to any organization seeking a talented individual with a passion for leveraging machine learning to address real-world challenges.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Mohamed Azarudeen Z</h4>
+                                    <span>Senior Developer @ KPMG | 2x Microsoft MVP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I highly recommend Dinesh and am confident in his ability to excel in any future endeavors. He would be a valuable asset to any team.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Bharanisri Senthilkumar</h4>
+                                    <span>Software Test Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">Dinesh is a very talented and multitasking individual with great determination. He has completed courses in C, C++, Java, Python, and Machine Learning, and consistently demonstrates an innovative mindset for building future-facing ML solutions. He keeps learning and adapting under pressure and shows persistence in achieving results.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Dr Brinda BM</h4>
+                                    <span>Asst. Prof. & Head, CSE (Cyber Security), PCE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Duplicate for infinite scroll -->
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I highly recommend Dinesh S for any role in Software Engineering or AI/ML. During his time as an intern with my team, he stood out as a sharp, proactive, and technically capable engineer. What impressed me most was his ability to bridge the gap between traditional software development and AI/ML transformation. He didn't just build features; he understood how to integrate intelligent models to drive actual value. He tackles complex problems with a great attitude and picks up new frameworks incredibly fast. He has a bright career ahead of him and would be a massive asset to any engineering team.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Arunkumar Ghargi</h4>
+                                    <span>Senior Technology & GCC Strategy Leader | <span class="company-badge-inline">Rakuten</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I have been following Dinesh's work for a while and collaborated with him on a machine learning project— I can confidently vouch for his exceptional skills and dedication. Dinesh's diverse skill set, spanning Python, Java, SQL, C/C++, HTML/CSS, and R, is truly impressive. His proactive problem-solving approach and innovative contributions reflect his technical prowess. I wholeheartedly recommend Dinesh to any organization seeking a talented individual with a passion for leveraging machine learning to address real-world challenges.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Mohamed Azarudeen Z</h4>
+                                    <span>Senior Developer @ KPMG | 2x Microsoft MVP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">I highly recommend Dinesh and am confident in his ability to excel in any future endeavors. He would be a valuable asset to any team.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Bharanisri Senthilkumar</h4>
+                                    <span>Software Test Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recom-card glass-card">
+                            <i class="fas fa-quote-left recom-quote"></i>
+                            <p class="recom-text">Dinesh is a very talented and multitasking individual with great determination. He has completed courses in C, C++, Java, Python, and Machine Learning, and consistently demonstrates an innovative mindset for building future-facing ML solutions. He keeps learning and adapting under pressure and shows persistence in achieving results.</p>
+                            <div class="recom-author">
+                                <div class="recom-author-info">
+                                    <h4>Dr Brinda BM</h4>
+                                    <span>Asst. Prof. & Head, CSE (Cyber Security), PCE</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Higher Secondary (HSC)</h3>
-                    <h4><i class="fas fa-school"></i> Shrishti Vidyashram</h4>
-                    <div class="edu-score-simple">54.4%</div>
-                </div>
-                <!-- SSLC -->
-                <div class="edu-card edu-card-sm glass-card" data-animate="fade-up" data-delay="200">
-                    <div class="edu-icon-wrap">
-                        <div class="edu-icon sm"><i class="fas fa-school"></i></div>
-                        <span class="edu-year">2016</span>
-                    </div>
-                    <h3>Secondary (SSLC)</h3>
-                    <h4><i class="fas fa-school"></i> Sri Sai Vidhyashram</h4>
-                    <div class="edu-score-simple">9.0 CGPA</div>
                 </div>
             </div>
         </div>
@@ -533,7 +645,7 @@
                 <article class="edu-card glass-card publication-card" data-animate="fade-up">
                     <div class="edu-icon-wrap">
                         <div class="edu-icon sm"><i class="fas fa-book-open"></i></div>
-                        <span class="edu-year"><i class="fas fa-file-alt"></i> Springer</span>
+                        <span class="edu-year"><i class="fas fa-book"></i> Springer</span>
                     </div>
                     <h3>An Anomaly-Misuse Hybrid System for Efficient Intrusion Detection in Clustered Wireless Sensor Network Using Neural Network</h3>
                     <h4><i class="fas fa-link"></i> Intrusion Detection | Neural Network</h4>
@@ -546,7 +658,7 @@
                 <article class="edu-card glass-card publication-card" data-animate="fade-up" data-delay="100">
                     <div class="edu-icon-wrap">
                         <div class="edu-icon sm"><i class="fas fa-book-open"></i></div>
-                        <span class="edu-year"><i class="fas fa-file-alt"></i> IEEE Xplore</span>
+                        <span class="edu-year"><i class="fas fa-book"></i> IEEE Xplore</span>
                     </div>
                     <h3>Enhancing Landslide Detection Accuracy and Efficiency Through Multi Scale Augmentation and Parallel Optimization Techniques</h3>
                     <h4><i class="fas fa-link"></i> Computer Vision | Parallel Optimization</h4>
@@ -559,7 +671,7 @@
                 <article class="edu-card glass-card publication-card" data-animate="fade-up" data-delay="200">
                     <div class="edu-icon-wrap">
                         <div class="edu-icon sm"><i class="fas fa-book-open"></i></div>
-                        <span class="edu-year"><i class="fas fa-file-alt"></i> IEEE Xplore</span>
+                        <span class="edu-year"><i class="fas fa-book"></i> IEEE Xplore</span>
                     </div>
                     <h3>Enhanced Deep Smart Intelligence Based Driver Drowsiness Detection Using Optimal Scalar Vector Feature Selection with Convolution Neural Network</h3>
                     <h4><i class="fas fa-link"></i> Intelligent Transport | CNN</h4>
@@ -591,7 +703,7 @@
                         <div class="contact-chip glass-card">
                             <div class="chip-icon"><i class="fas fa-envelope"></i></div>
                             <div><small>Email</small><a
-                                    href="mailto:sdinesh14022001@gmail.com">sdinesh14022001@gmail.com</a></div>
+                                    href="mailto:dineshs142@outlook.com">dineshs142@outlook.com</a></div>
                         </div>
                         <div class="contact-chip glass-card">
                             <div class="chip-icon"><i class="fas fa-phone-alt"></i></div>
@@ -653,9 +765,9 @@
                 <a href="https://linkedin.com/in/dinesh-s-3978b819a" target="_blank"><i
                         class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/dineshs14" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:sdinesh14022001@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:dineshs142@outlook.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <small>© 2025 Dinesh S. All rights reserved.</small>
+            <small>© 2025 Dinesh S All rights reserved.</small>
         </div>
     </footer>
 
