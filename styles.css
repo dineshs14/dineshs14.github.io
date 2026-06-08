@@ -1040,18 +1040,7 @@ h3,
 }
 .logo-mark { font-family: var(--font-display); letter-spacing: -0.02em; }
 
-/* ---- PROFILE ORBITS (animated dots around profile picture) ---- */
-.profile-orbits { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
-.orbit-dot { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px rgba(6,182,212,0.6); }
-.orbit-dot.od-1 { width: 12px; height: 12px; animation: orbit1 6s linear infinite; }
-.orbit-dot.od-2 { width: 9px; height: 9px; background: var(--accent2); animation: orbit2 8s linear infinite; }
-.orbit-dot.od-3 { width: 7px; height: 7px; background: var(--accent3); animation: orbit3 10s linear infinite; }
-.orbit-dot.od-4 { width: 8px; height: 8px; background: linear-gradient(180deg,var(--accent),var(--accent2)); animation: orbit4 12s linear infinite; }
-
-@keyframes orbit1 { from { transform: rotate(0deg) translateX(140px) rotate(0deg); } to { transform: rotate(360deg) translateX(140px) rotate(-360deg); } }
-@keyframes orbit2 { from { transform: rotate(0deg) translateX(100px) rotate(0deg); } to { transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
-@keyframes orbit3 { from { transform: rotate(0deg) translateX(76px) rotate(0deg); } to { transform: rotate(360deg) translateX(76px) rotate(-360deg); } }
-@keyframes orbit4 { from { transform: rotate(0deg) translateX(54px) rotate(0deg); } to { transform: rotate(360deg) translateX(54px) rotate(-360deg); } }
+/* ---- TECH ORBITS REMOVED — keeping only external badges ---- */
 
 /* ---- GEOMETRIC SHAPES ---- */
 .hero-geo-shapes {
@@ -1127,30 +1116,7 @@ h3,
     background: radial-gradient(circle, rgba(255,122,24,.14), transparent 70%);
 }
 
-/* ---- ENERGY PARTICLES ON PROFILE ---- */
-.ring-energy {
-    position: absolute; inset: -12px;
-    z-index: 1; pointer-events: none;
-}
-.energy-particle {
-    position: absolute;
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent), 0 0 24px rgba(0,229,255,.3);
-    animation: energyOrbit 5s linear infinite;
-}
-.ep-1 { animation-delay: 0s; --orbit-start: 0deg; }
-.ep-2 { animation-delay: .83s; --orbit-start: 60deg; background: var(--accent2); box-shadow: 0 0 12px var(--accent2); }
-.ep-3 { animation-delay: 1.66s; --orbit-start: 120deg; }
-.ep-4 { animation-delay: 2.5s; --orbit-start: 180deg; background: var(--accent3); box-shadow: 0 0 12px var(--accent3); }
-.ep-5 { animation-delay: 3.33s; --orbit-start: 240deg; background: var(--accent2); box-shadow: 0 0 12px var(--accent2); }
-.ep-6 { animation-delay: 4.16s; --orbit-start: 300deg; }
-@keyframes energyOrbit {
-    from { transform: rotate(var(--orbit-start, 0deg)) translateX(calc(50% + 24px)) rotate(calc(-1 * var(--orbit-start, 0deg))); opacity:.8; }
-    50%  { opacity:1; }
-    to   { transform: rotate(calc(var(--orbit-start, 0deg) + 360deg)) translateX(calc(50% + 24px)) rotate(calc(-1 * (var(--orbit-start, 0deg) + 360deg))); opacity:.8; }
-}
+/* ---- ENERGY PARTICLES REMOVED ---- */
 
 /* ---- SCROLL CUE — ANIMATED MOUSE ---- */
 .scroll-cue {
