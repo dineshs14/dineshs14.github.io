@@ -164,6 +164,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .ring-fill { stroke: var(--accent); stroke-linecap: round; }
 .score-val { font: 500 18px var(--display); }
 .score-label { font: 12px var(--mono); color: var(--text-3); }
+.convocation-card { max-width: 980px; margin: 48px auto 0; overflow: hidden; }
+.convocation-card > img { width: 100%; height: auto; }
+.convocation-caption { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; padding: 32px; }
+.convocation-caption .section-tag { margin-bottom: 12px; }
+.convocation-caption h3 { font: 500 clamp(24px,3vw,32px)/1.3 var(--display); letter-spacing: -.6px; }
+.convocation-caption p { max-width: 580px; margin-top: 12px; color: var(--text-2); }
+.convocation-caption time { flex-shrink: 0; color: var(--text-3); font: 12px/1.8 var(--mono); }
+@media (max-width: 600px) {
+  .convocation-card { margin-top: 32px; }
+  .convocation-caption { flex-direction: column; gap: 20px; padding: 24px; }
+}
 .achieve-cat-title { font: 500 18px var(--display); color: var(--text-2); margin: 30px 0 20px; }
 .achieve-cat-title i { color: var(--accent); margin-right: 12px; font-size: 13px; }
 .recom-track { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
