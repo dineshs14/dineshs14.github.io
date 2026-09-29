@@ -15,7 +15,7 @@
     const light = theme === 'light';
     themeButton.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
     themeButton.innerHTML = `<i class="fas fa-${light ? 'moon' : 'sun'}" aria-hidden="true"></i>`;
-    document.querySelector('meta[name="theme-color"]').content = light ? '#f4f5f0' : '#111310';
+    document.querySelector('meta[name="theme-color"]').content = light ? '#f5f6fa' : '#0c1019';
   }
   try { setTheme(localStorage.getItem('portfolio_theme') === 'light' ? 'light' : 'dark'); }
   catch { setTheme('dark'); }
@@ -143,4 +143,28 @@
     handoff.click();
   });
   document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+  // A user-triggered signal, with a static equivalent for reduced motion.
+  const network = document.getElementById('neural-portrait');
+  const signalButton = document.getElementById('signal-button');
+  const networkState = document.getElementById('network-state');
+  let signalTimer;
+  let signalFrame;
+  function resetSignal() {
+    window.clearTimeout(signalTimer);
+    window.cancelAnimationFrame(signalFrame);
+    network.classList.remove('signal-on');
+    networkState.textContent = 'Everything starts with a connection.';
+  }
+  signalButton.addEventListener('click', () => {
+    resetSignal();
+    signalFrame = window.requestAnimationFrame(() => {
+      network.classList.add('signal-on');
+      networkState.textContent = reducedMotion.matches ? 'Connections highlighted.' : 'Signal sent through the network.';
+      signalTimer = window.setTimeout(resetSignal, 3500);
+    });
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) resetSignal();
+  });
 })();
