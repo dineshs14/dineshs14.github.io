@@ -68,10 +68,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-socials a { font-size: 12px; color: var(--text-2); }
 .hero-socials a span { margin-left: 4px; color: var(--text-3); }
 .hero-socials a:hover { color: var(--accent); }
-.hero-right { position: relative; max-width: 440px; width: 100%; justify-self: end; }
+.hero-right { position: relative; max-width: 380px; width: 100%; justify-self: end; }
 .portrait-frame { position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); overflow: hidden; }
-.profile-img { width: 100%; height: 390px; object-fit: cover; object-position: 42% 28%; filter: grayscale(1); transition: filter .7s; }
-.hero-right:hover .profile-img { filter: grayscale(0); }
+.profile-img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
 .portrait-caption { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 28px; color: var(--text-1); }
 .portrait-caption strong { display: block; font: 500 28px var(--display); letter-spacing: -1px; }
 .portrait-caption div > span { display: block; margin-top: 8px; font-size: 14px; color: var(--text-2); }
@@ -97,15 +96,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .section-alt .glass-card { background: var(--bg); }
 .glass-card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
 .projects-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; counter-reset: project; }
-.project-card { overflow: hidden; counter-increment: project; }
+.project-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; counter-increment: project; }
 .project-card:hover { transform: translateY(-6px); }
-.project-img-wrap { position: relative; overflow: hidden; aspect-ratio: 1.4; background: var(--line); }
-.project-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease), filter .6s; filter: saturate(.7); }
+.project-img-wrap { position: relative; flex: none; width: 100%; height: auto; overflow: hidden; aspect-ratio: 8 / 5; background: var(--line); }
+.project-img-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease), filter .6s; filter: saturate(.7); }
 .project-card:hover img { transform: scale(1.05); filter: saturate(1); }
 .project-overlay { position: absolute; right: 13px; bottom: 13px; display: flex; gap: 12px; }
 .overlay-btn { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #ffffff50; border-radius: 50%; background: #111310e8; color: #f0f1e9; transition: background .2s, color .2s; }
 .overlay-btn:hover { background: #c3f85c; color: #111310; }
-.project-body { padding: 24px; }
+.project-body { flex: 1; min-width: 0; padding: 24px; }
 .project-cat { font: 12px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--accent); display: flex; justify-content: space-between; }
 .project-cat::after { content: '0' counter(project); color: var(--text-3); }
 .project-body h3 { font: 500 22px/1.3 var(--display); letter-spacing: -.6px; margin: 12px 0; }
@@ -244,7 +243,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .container, .nav-inner { width: calc(100% - 64px); }
   .hero-grid { gap: 64px; }
   .hero-name { font-size: clamp(48px,6.3vw,72px); }
-  .profile-img { height: 370px; }
   .hero-stats { gap: 30px; }
   .nav-links { gap: 20px; }
   .project-body { padding: 20px; }
@@ -277,7 +275,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .btn-text { padding-inline: 0; }
   .hero-socials { gap: 14px; margin-top: 26px; }
   .hero-socials > span { flex-basis: 100%; }
-  .profile-img { height: 350px; }
   .portrait-location { font-size: 12px; }
   .hero-bottom { gap: 20px; }
   .hero-bottom > p { font-size: 12px; }
@@ -287,8 +284,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .stat-label { font-size: 12px; max-width: 55px; }
   .section { padding: 80px 0; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .projects-grid > :first-child { grid-column: 1/-1; display: grid; grid-template-columns: 1fr 1fr; }
-  .projects-grid > :first-child .project-img-wrap { aspect-ratio: auto; height: 100%; min-height: 290px; }
   .about-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 34px; }
@@ -303,8 +298,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-desc { max-width: 360px; font-size: 16px; }
   .hero-socials > span { flex-basis: auto; }
   .hero-socials { gap: 16px; }
-  .hero-right { width: 100%; max-width: 390px; }
-  .profile-img { height: auto; aspect-ratio: 1 / 1; }
+  .hero-right { width: 100%; max-width: 350px; }
   .portrait-caption { padding: 22px; }
   .portrait-caption strong { font-size: 26px; }
   .portrait-location { font-size: 12px; }
@@ -318,8 +312,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .section-head { margin-bottom: 28px; }
   .section-title { font-size: 36px; }
   .projects-grid, .edu-grid, #education .edu-grid, .recom-track { grid-template-columns: 1fr; }
-  .projects-grid > :first-child { display: block; }
-  .projects-grid > :first-child .project-img-wrap { aspect-ratio: 1.4; min-height: 0; }
   .project-body { padding: 24px; }
   .about-card, .skills-card, .exp-card, .edu-card, .contact-form { padding: 24px; }
   .info-row { grid-template-columns: 1fr; gap: 12px; }

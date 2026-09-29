@@ -5,7 +5,7 @@ import { resolve, dirname } from 'node:path';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist');
 const publicFiles = [
-  'index.html', 'styles.css', 'script.js', 'profile.jpg',
+  'index.html', 'styles.css', 'script.js', 'profile.jpg', 'profile-studio.webp',
   'landslide.png', 'chatbot.png', 'ai_car_parking_system.png',
   'Dinesh S.pdf', 'CNAME', 'convocation.webp', 'convocation-small.webp',
 ];
